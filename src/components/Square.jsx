@@ -1,24 +1,10 @@
 import { useState } from "react";
 
-function Square(props) {/*
-  const [valore, cambiaValore] = useState("");
-  const [xIsNext, xIN] = useState(false);
-  const handleClick = () => {
-    if (xIsNext) {
-      cambiaValore("X");
-      xIN(false);
-    } else {
-      cambiaValore("O");
-      xIN(true);
-    }
-  }*/
-  const[valore,cambiaValore]=useState(props.valore);
-  const[handle,onClick]=useState(props.onClick);
-  
-  
+function Square(props) {
+  //const [valore,setValore]=useState(props.value);
   return (
-    <button className="square" onClick={handleClick}>
-      {valore}
+    <button className="square" onClick={props.onClick}>
+      {props.value}
     </button>
   );
 }

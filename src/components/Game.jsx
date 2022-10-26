@@ -1,10 +1,15 @@
 import Board from "./Board";
 
 function Game() {
+  const [history,setHistory]=useState();
+  function clickHandler ()
+  {
+    console.log(valore);
+  }
   return (
     <div className="game">
       <div className="game-board">
-        <Board />
+        <Board onClick={clickHandler}/>
       </div>
       <div className="game-info">
         <div>{/* status */}</div>
